@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: trip_revenue_kpis
+    description: "Daily vehicle-level revenue KPIs."
+    columns:
+      - name: trip_date
+        description: "Date of trip"
+      - name: vehicle_id
+        description: "Vehicle identifier"
+      - name: total_fare
+        tests:
+          - not_null
+      - name: avg_fare
+        tests:
+          - not_null
+      - name: trip_count
+        tests:
+          - not_null
+
+  - name: trip_driver_performance
+    description: "Driver performance KPIs and revenue metrics."
+    columns:
+      - name: driver_id
+        tests: 
+          - not_null
+          - unique
+
+  - name: trip_customer_trends
+    description: "Customer spending and activity segmentation."
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
