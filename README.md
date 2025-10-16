@@ -24,9 +24,7 @@ The full pipeline flow is as follows:
 
 ## 🖼️ Visual Architecture
 
-<p align="center">
-  <img src="images/pipeline%20project.png" alt="Pipeline Project Overview" width="800">
-</p>
+![Pipeline Project Overview](images/pipeline%20project.png)
 
 ---
 
@@ -39,9 +37,7 @@ Key highlights:
 - Schema enforcement for consistency
 - Storage in `/mnt/bronze/` path for downstream use
 
-<p align="center">
-  <img src="images/bronze%20layer%20ingestion.png" alt="Bronze Layer Ingestion" width="700">
-</p>
+![Bronze Layer Ingestion](images/bronze%20layer%20ingestion.png)
 
 ---
 
@@ -49,15 +45,11 @@ Key highlights:
 
 PySpark Streaming enables continuous ingestion and schema validation for the incoming trip data.
 
-<p align="center">
-  <img src="images/pyspark%20streaming.png" alt="PySpark Streaming" width="700">
-</p>
+![PySpark Streaming](images/pyspark%20streaming.png)
 
-Schema Example:
+**Schema Example:**
 
-<p align="center">
-  <img src="images/schema.png" alt="Schema" width="700">
-</p>
+![Schema](images/schema.png)
 
 ---
 
@@ -122,6 +114,32 @@ Each model uses **Jinja conditions and loops** for reusable logic and **dbt snap
 
 ---
 
+This approach ensures:
+
+* Incremental materialization (only new data processed)
+* Source tracking via `source()` definitions
+* Dynamic column selection via Jinja loops
+
+![Jinja Templating](images/Jinja.png)
+
+---
+
+## 🏅 Gold Layer — Business KPIs & Insights
+
+The **Gold Layer** produces three key business views designed to simulate real-world analytical dashboards.
+
+| View                      | Purpose                | Key Metrics                                       |
+| ------------------------- | ---------------------- | ------------------------------------------------- |
+| `trip_revenue_kpis`       | Financial overview     | Total fare, average fare, total distance          |
+| `trip_driver_performance` | Workforce productivity | Total trips, revenue per km, performance category |
+| `trip_customer_trends`    | Customer retention     | Average spend, loyalty segmentation               |
+
+Each model uses **Jinja conditions and loops** for reusable logic and **dbt snapshots** to maintain historical changes.
+
+![dbt Snapshots](images/dbt%20snapshots.png)
+
+---
+
 ## ⚡ Materialization & Snapshots
 
 Materialization strategy in dbt ensures efficient data updates:
@@ -129,14 +147,8 @@ Materialization strategy in dbt ensures efficient data updates:
 * **Bronze & Silver:** Incremental materialization using unique keys.
 * **Gold:** Snapshot-based updates for time-travel and trend analysis.
 
-<p align="center">
-  <img src="images/dbt%20run.png" alt="dbt Run" width="700">
-</p>
-
-
-<p align="center">
-  <img src="images/databricks%20gold%20layer.png" alt="Databricks Gold Layer" width="700">
-</p>
+![dbt Run](images/dbt%20run.png)
+![Databricks Gold Layer](images/databricks%20gold%20layer.png)
 
 ---
 
