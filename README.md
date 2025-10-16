@@ -25,7 +25,7 @@ The full pipeline flow is as follows:
 ## 🖼️ Visual Architecture
 
 <p align="center">
-  <img src="images/pipeline_project.png" alt="Pipeline Project Overview" width="800">
+  <img src="images/pipeline%20project.png" alt="Pipeline Project Overview" width="800">
 </p>
 
 ---
@@ -40,7 +40,7 @@ Key highlights:
 - Storage in `/mnt/bronze/` path for downstream use
 
 <p align="center">
-  <img src="images/bronze_layer_ingestion.png" alt="Bronze Layer Ingestion" width="700">
+  <img src="images/bronze%20layer%20ingestion.png" alt="Bronze Layer Ingestion" width="700">
 </p>
 
 ---
@@ -50,7 +50,7 @@ Key highlights:
 PySpark Streaming enables continuous ingestion and schema validation for the incoming trip data.
 
 <p align="center">
-  <img src="images/pyspark_streaming.png" alt="PySpark Streaming" width="700">
+  <img src="images/pyspark%20streaming.png" alt="PySpark Streaming" width="700">
 </p>
 
 Schema Example:
@@ -101,7 +101,7 @@ This approach ensures:
 * Dynamic column selection via Jinja loops
 
 <p align="center">
-  <img src="images/jinja.png" alt="Jinja Templating" width="700">
+  <img src="images/Jinja.png" alt="Jinja Templating" width="700">
 </p>
 
 ---
@@ -118,9 +118,7 @@ The **Gold Layer** produces three key business views designed to simulate real-w
 
 Each model uses **Jinja conditions and loops** for reusable logic and **dbt snapshots** to maintain historical changes.
 
-<p align="center">
-  <img src="images/dbt_snapshots.png" alt="dbt Snapshots" width="700">
-</p>
+<p align="center"> <img src="images/dbt%20snapshots.png" alt="dbt Snapshots" width="700"> </p>
 
 ---
 
@@ -132,11 +130,12 @@ Materialization strategy in dbt ensures efficient data updates:
 * **Gold:** Snapshot-based updates for time-travel and trend analysis.
 
 <p align="center">
-  <img src="images/dbt_run.png" alt="dbt Run" width="700">
+  <img src="images/dbt%20run.png" alt="dbt Run" width="700">
 </p>
 
+
 <p align="center">
-  <img src="images/databricks_gold_layer.png" alt="Databricks Gold Layer" width="700">
+  <img src="images/databricks%20gold%20layer.png" alt="Databricks Gold Layer" width="700">
 </p>
 
 ---
@@ -230,6 +229,3 @@ pyspark-dbt-project/
 
 ```
 
-
-Would you like me to make the README slightly **more technical (targeted at data engineers)** or **more storytelling (portfolio-style for recruiters)** before you push it to GitHub?
-```
