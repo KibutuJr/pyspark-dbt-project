@@ -24,7 +24,7 @@ The full pipeline flow is as follows:
 
 ## 🖼️ Visual Architecture
 
-![Pipeline Project Overview](images/pipeline%20project.png)
+![Pipeline Project Overview](images/project%20pipeline.png)
 
 ---
 
@@ -37,7 +37,7 @@ Key highlights:
 - Schema enforcement for consistency
 - Storage in `/mnt/bronze/` path for downstream use
 
-![Bronze Layer Ingestion](images/bronze%20layer%20ingestion.png)
+![Bronze Layer Ingestion](images/bronze%20layer%20ingestion.PNG)
 
 ---
 
@@ -45,11 +45,11 @@ Key highlights:
 
 PySpark Streaming enables continuous ingestion and schema validation for the incoming trip data.
 
-![PySpark Streaming](images/pyspark%20streaming.png)
+![PySpark Streaming](images/pyspark%20streaming.PNG)
 
 **Schema Example:**
 
-![Schema](images/schema.png)
+![Schema](images/schema.PNG)
 
 ---
 
@@ -84,6 +84,7 @@ WHERE last_updated_timestamp > (
     SELECT COALESCE(MAX(last_updated_timestamp), '1900-01-01') FROM {{ this }}
 )
 {% endif %}
+
 ````
 
 This approach ensures:
@@ -92,9 +93,7 @@ This approach ensures:
 * Source tracking via `source()` definitions
 * Dynamic column selection via Jinja loops
 
-<p align="center">
-  <img src="images/Jinja.png" alt="Jinja Templating" width="700">
-</p>
+<p align="center"> <img src="images/Jinja.PNG" alt="Jinja Templating" width="700"> </p>
 
 ---
 
