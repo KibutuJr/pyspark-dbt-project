@@ -87,13 +87,17 @@ WHERE last_updated_timestamp > (
 
 ````
 
+---
+
 This approach ensures:
 
 * Incremental materialization (only new data processed)
 * Source tracking via `source()` definitions
 * Dynamic column selection via Jinja loops
 
-<p align="center"> <img src="images/Jinja.PNG" alt="Jinja Templating" width="700"> </p>
+<p align="center">
+  <img src="images/Jinja.PNG" alt="Jinja Templating" width="700">
+</p>
 
 ---
 
@@ -109,33 +113,9 @@ The **Gold Layer** produces three key business views designed to simulate real-w
 
 Each model uses **Jinja conditions and loops** for reusable logic and **dbt snapshots** to maintain historical changes.
 
-<p align="center"> <img src="images/dbt%20snapshots.png" alt="dbt Snapshots" width="700"> </p>
-
----
-
-This approach ensures:
-
-* Incremental materialization (only new data processed)
-* Source tracking via `source()` definitions
-* Dynamic column selection via Jinja loops
-
-![Jinja Templating](images/Jinja.png)
-
----
-
-## 🏅 Gold Layer — Business KPIs & Insights
-
-The **Gold Layer** produces three key business views designed to simulate real-world analytical dashboards.
-
-| View                      | Purpose                | Key Metrics                                       |
-| ------------------------- | ---------------------- | ------------------------------------------------- |
-| `trip_revenue_kpis`       | Financial overview     | Total fare, average fare, total distance          |
-| `trip_driver_performance` | Workforce productivity | Total trips, revenue per km, performance category |
-| `trip_customer_trends`    | Customer retention     | Average spend, loyalty segmentation               |
-
-Each model uses **Jinja conditions and loops** for reusable logic and **dbt snapshots** to maintain historical changes.
-
-![dbt Snapshots](images/dbt%20snapshots.png)
+<p align="center">
+  <img src="images/dbt%20snapshots.png" alt="dbt Snapshots" width="700">
+</p>
 
 ---
 
@@ -146,8 +126,14 @@ Materialization strategy in dbt ensures efficient data updates:
 * **Bronze & Silver:** Incremental materialization using unique keys.
 * **Gold:** Snapshot-based updates for time-travel and trend analysis.
 
-![dbt Run](images/dbt%20run.png)
-![Databricks Gold Layer](images/databricks%20gold%20layer.png)
+<p align="center">
+  <img src="images/dbt%20run.PNG" alt="dbt Run" width="700">
+</p>
+
+<p align="center">
+  <img src="images/databricks%20gold%20layer.PNG" alt="Databricks Gold Layer" width="700">
+</p>
+
 
 ---
 
