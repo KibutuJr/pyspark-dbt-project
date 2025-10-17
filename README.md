@@ -223,6 +223,3 @@ pyspark-dbt-project/
 ---
 
 > ⚡ *This repository serves as a real-world blueprint for building scalable, maintainable, and business-driven data pipelines using PySpark, Databricks, and dbt Cloud.*
-
-```
-
