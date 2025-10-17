@@ -114,7 +114,7 @@ The **Gold Layer** produces three key business views designed to simulate real-w
 Each model uses **Jinja conditions and loops** for reusable logic and **dbt snapshots** to maintain historical changes.
 
 <p align="center">
-  <img src="images/dbt%20snapshots.png" alt="dbt Snapshots" width="700">
+  <img src="images/dbt%20snapshots.PNG" alt="dbt Snapshots" width="700">
 </p>
 
 ---
