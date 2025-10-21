@@ -10,6 +10,14 @@ The goal is to simulate **real-world analytics engineering and data transformati
 This project demonstrates how to build a **modern data engineering pipeline** that ingests raw streaming data, transforms it using PySpark and dbt, and exposes key business insights through a Gold layer.  
 It showcases how to handle real-world challenges like incremental loading, deduplication, and change tracking while maintaining transparency, modularity, and scalability.
 
+---
+
+## Project Article
+
+Medium Article: https://medium.com/@codegnerdev/from-raw-chaos-to-business-gold-building-an-end-to-end-data-engineering-pipeline-with-pyspark-cc6ca4e458ec
+
+---
+
 ### 🔗 Pipeline Overview
 
 The full pipeline flow is as follows:
