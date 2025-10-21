@@ -12,9 +12,9 @@ It showcases how to handle real-world challenges like incremental loading, dedup
 
 ---
 
-## Project Article
+## 📰 Project Article  
 
-Medium Article: https://medium.com/@codegnerdev/from-raw-chaos-to-business-gold-building-an-end-to-end-data-engineering-pipeline-with-pyspark-cc6ca4e458ec
+**Medium Article:** [From Raw Chaos to Business Gold — Building an End-to-End Data Engineering Pipeline with PySpark](https://medium.com/@codegnerdev/from-raw-chaos-to-business-gold-building-an-end-to-end-data-engineering-pipeline-with-pyspark-cc6ca4e458ec)
 
 ---
 
